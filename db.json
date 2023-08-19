@@ -1,0 +1,7 @@
+{
+    "alunos": [
+        {"name": "Enzo", "curso": "TI"},
+        {"name": "Daniel", "curso": "TI"},
+        {"name": "E", "curso": "I"}
+    ]
+}
