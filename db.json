@@ -1,6 +1,24 @@
 {
-    "alunos": [
-        { "id": 1, "name": "Enzo", "curso": "TI"},
-        { "id": 2, "name": "Luana", "curso": "TI"}
-    ]
+  "alunos": [
+    {
+      "id": 1,
+      "name": "Enzo",
+      "curso": "TI"
+    },
+    {
+      "id": 2,
+      "name": "Luana",
+      "curso": "TI"
+    },
+    {
+      "name": "Catarina",
+      "curso": "Enfermagem",
+      "id": 3
+    },
+    {
+      "name": "Joana",
+      "curso": "Quimica",
+      "id": 4
+    }
+  ]
 }
