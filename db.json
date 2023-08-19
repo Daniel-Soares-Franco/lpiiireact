@@ -1,7 +1,12 @@
 {
     "alunos": [
+<<<<<<< HEAD
         {"name": "Enzo", "curso": "TI"},
         {"name": "Daniel", "curso": "TI"},
         {"name": "E", "curso": "I"}
+=======
+        { "id": 1, "name": "Enzo", "curso": "TI"},
+        { "id": 2, "name": "Luana", "curso": "TI"}
+>>>>>>> 4d2db6d9806e99e0a1112656e004905f4d3523ff
     ]
 }
