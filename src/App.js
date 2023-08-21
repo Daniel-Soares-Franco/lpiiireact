@@ -5,7 +5,8 @@ import {HashRouter, BrowserRouter, Routes, Route} from 'react-router-dom'
 import Tarefas from './pages/tarefas/Tarefas';
 import Formulario from './pages/formulario/Formulario';
 import Alunos from './pages/alunos/Alunos';
-import Aluno from './pages/alunos/components/Aluno';
+import Aluno from './pages/aluno/Aluno';
+
 
 
 function App() {

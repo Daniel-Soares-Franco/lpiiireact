@@ -8,9 +8,13 @@ function Aluno(props) {
 
   const carregaAluno = async () => {
     
+    try{
     const res = await fetch('http://localhost:38000/alunos/' + id);
     const data = await res.json();
     setAluno(data);
+    }catch(err){
+      console.log(err);
+    }
 
   }
 

@@ -1,6 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import Tarefa from './components/tarefa'
+import Tarefa from './components/Tarefa'
 
 
 function Tarefas(props) {

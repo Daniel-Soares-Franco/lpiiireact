@@ -1,5 +1,4 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 
 function Alunos(props) {
   const [alunos, setAlunos] = React.useState(null)
@@ -10,6 +9,9 @@ function Alunos(props) {
       const res = await fetch("http://localhost:38000/alunos")
       const serverData = await res.json();
       setAlunos(serverData);
+    } catch(err){
+      console.log(err);
+
     } finally {
       setLoading(false);
     }
