@@ -1,4 +1,5 @@
 import React from 'react'
+import { Table } from 'react-bootstrap';
 
 function Alunos(props) {
   const [alunos, setAlunos] = React.useState(null)
@@ -6,22 +7,25 @@ function Alunos(props) {
   const carregaAlunos = async () => {
     setLoading(true);
     try {
-      const res = await fetch("http://localhost:38000/alunos")
-      const serverData = await res.json();
-      setAlunos(serverData);
+      setTimeout(async () => {
+        const res = await fetch("http://localhost:38000/alunos")
+        const serverData = await res.json();
+        setAlunos(serverData);
+      }, 2000)
+     
     } catch(err){
       console.log(err);
-
-    } finally {
       setLoading(false);
-    }
+
+    } 
+    
   }
 
   React.useEffect(() => {
     carregaAlunos();
   }, [])
   return (
-    <table>
+    <Table  bordered hover>
         <thead>
             <th>Id</th>
             <th>Nome</th>
@@ -36,7 +40,7 @@ function Alunos(props) {
             </tr>
           ))}
         </tbody>
-    </table>
+    </Table>
   )
 }
 

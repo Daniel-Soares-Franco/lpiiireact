@@ -1,9 +1,12 @@
 import React from 'react'
 import Tarefa from './components/Tarefa'
+import MyBackdrop from '../../shared/components/my-backdrop'
+import { CSSTransition } from 'react-transition-group'
 
 
 function Tarefas(props) {
     const [tarefas, setTarefas] = React.useState([])
+    const [show, setShow] = React.useState(false)
   
     const removeTarefa = (idx) => {
       const novaLista = [...tarefas]
@@ -13,13 +16,19 @@ function Tarefas(props) {
   
     const adicionaTarefa = () => {
       const novaTarefa = Math.floor(Math.random() * 10)
-      setTarefas([...tarefas, novaTarefa]);
+      setTimeout(() =>setTarefas([...tarefas, novaTarefa]), 2000 );
+      setShow(true);
     }
   
     return (
       <div>
-        <h1>Tarefas</h1>
+        <h1 style={{color: "red"}}>Tarefas</h1>
         <hr />
+        {/*
+        <CSSTransition in={show} timeout={500}  unmountOnExit>
+        <MyBackdrop show={true} />
+        </CSSTransition>
+    */}
         {tarefas.map((tarefa, index) => 
         <Tarefa removeTarefa={removeTarefa} index={index}  key={index} value={tarefa} />
         )}

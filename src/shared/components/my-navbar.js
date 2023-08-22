@@ -1,14 +1,23 @@
  import {Link} from 'react-router-dom'
+
+import Container from 'react-bootstrap/Container';
+import Nav from 'react-bootstrap/Nav';
+import Navbar from 'react-bootstrap/Navbar';
  
  export default function MyNavbar(props){
     return (
-        <nav>
-            <ul><li><img width={'100px'} src={props.logo} alt="test" /></li>
-                <li><Link to={""} >Tarefas</Link></li>
-                <li><Link to={"form"} >Formulario</Link></li>
-                <li><Link to={"alunos"} >Alunos</Link></li>
-                
-            </ul>
-        </nav>
+        
+
+       
+      <Navbar bg="primary" data-bs-theme="dark">
+        <Container>
+          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+          <Nav className="me-auto">
+            <Nav.Link><Link style={{textDecoration: "none", color: "white"}} to={""} >Tarefas</Link></Nav.Link>
+            <Nav.Link><Link style={{textDecoration: "none", color: "white"}} to={"form"} >Formulario</Link></Nav.Link>
+            <Nav.Link ><Link style={{textDecoration: "none", color: "white"}} to={"alunos"} >Alunos</Link></Nav.Link>
+          </Nav>
+        </Container>
+      </Navbar>
     )
  }
