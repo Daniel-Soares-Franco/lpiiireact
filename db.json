@@ -25,8 +25,7 @@
     "alunos": [
         {"name": "Enzo", "curso": "TI"},
         {"name": "Daniel", "curso": "TI"},
-        {"name": "E", "curso": "I"}
-
+        {"name": "E", "curso": "I"},
         { "id": 1, "name": "Enzo", "curso": "TI"},
         { "id": 2, "name": "Luana", "curso": "TI"}
     ]
